@@ -3,6 +3,7 @@ package edu.miracosta.cs134.gamersdelight;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -36,7 +37,7 @@ public class GameDetailsActivity extends AppCompatActivity {
         String name = intent.getStringExtra("Name");
         String description = intent.getStringExtra("Description");
         String imageName = intent.getStringExtra("ImageName");
-        double rating = intent.getDoubleExtra("Rating", 0f);
+        double rating =  intent.getDoubleExtra("Rating", 0f);
 
         // DONE:  this layout, including the TextViews, RatingBar and ImageView with the Game details.
 

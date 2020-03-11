@@ -76,7 +76,7 @@ public class GameListAdapter extends ArrayAdapter<Game> {
 
         gameListName.setText(selectedGame.getName());
         gameListDescription.setText(selectedGame.getDescription());
-        ratingList.setRating(selectedGame.getRating());
+        ratingList.setRating((float) selectedGame.getRating());
 
         AssetManager am = mContext.getAssets();
         InputStream stream = null;

@@ -38,20 +38,23 @@ public class JSONLoader {
 
         try {
             JSONObject jsonRootObject = new JSONObject(json);
+
             //DONE: Complete the name of the root object in the JSON file
             JSONArray allGamesJSON = jsonRootObject.getJSONArray("Games");
             int numberOfGames = allGamesJSON.length();
 
             // DONE: Loop through the root object array and
             for (int i = 0; i < numberOfGames ; i++) {
+
                 // DONE: Extract each single Game from the JSON file.
                 JSONObject gameEventJSON =  allGamesJSON.getJSONObject(i);
+
                 // Done: Create an object to represent each game, then
                 Game addGame = new Game();
 
                 addGame.setName(gameEventJSON.getString("Name"));
                 addGame.setDescription(gameEventJSON.getString("Description"));
-                addGame.setRating((float)gameEventJSON.getDouble("Rating"));
+                addGame.setRating((float) gameEventJSON.getDouble("Rating"));
                 addGame.setImageName(gameEventJSON.getString("ImageName"));
 
                 // DONE: add each Game to the list.

@@ -12,7 +12,7 @@ public class Game {
     //Member variables
     private String mName;
     private String mDescription;
-    private float mRating;
+    private double mRating;
     private String mImageName;
 
     /**
@@ -32,6 +32,10 @@ public class Game {
     //constructor
     public Game()
     {
+        mName = "";
+        mDescription = "";
+        mRating = 0.0f;
+        mImageName = "";
 
     }
 
@@ -39,13 +43,13 @@ public class Game {
 
     /**
      * Creates a new <code>Game</code> from its name, description and rating.
-     * The default image name avatar.png is used.
+     * The default image name controller.png is used.
      *
      * @param description The game description
      * @param rating The game rating (out of 5.0)
      */
     public Game(String name, String description, float rating) {
-        this(name, description, rating, "avatar.png");
+        this(name, description, rating, "controller.png");
     }
 
     /**
@@ -84,7 +88,7 @@ public class Game {
      * Gets the rating of the <code>Game</code>.
      * @return The rating (number of stars) of the game.
      */
-    public float getRating() {
+    public double getRating() {
         return mRating;
     }
 
